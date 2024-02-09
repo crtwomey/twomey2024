@@ -1,0 +1,156 @@
+% bregman divergence
+\DeclarePairedDelimiterX{\Bregx}[2]{(}{)}{%
+  #1\delimsize\|#2
+}
+\newcommand{\breg}{d_{\phi}\Bregx}
+
+% KL-Divergence Dkl(Q||P)
+\DeclarePairedDelimiterX{\Dklx}[2]{(}{)}{%
+  #1\delimsize\|#2
+}
+\newcommand{\Dkl}{D_{\mathrm{KL}}\Dklx}
+
+% Mutual Information I(X,Y)
+\DeclarePairedDelimiterX{\Ix}[2]{(}{)}{%
+  #1;#2
+}
+\newcommand{\I}{I\Ix}
+
+% Gaussian Mutual Information I(X,Y)
+\DeclarePairedDelimiterX{\Inx}[2]{(}{)}{%
+  #1;#2
+}
+\newcommand{\In}{I_\mathcal{N}\Inx}
+
+% Cross Entropy H(Q,P)
+\DeclarePairedDelimiterX{\hcrossx}[2]{(}{)}{%
+  #1,#2
+}
+\newcommand{\hcross}{H\hcrossx}
+
+% Conditional Entropy H(Q|P)
+\DeclarePairedDelimiterX{\hconx}[2]{(}{)}{%
+  #1|#2
+}
+\newcommand{\hcon}{H\hconx}
+
+% Entropy H(X)
+\DeclarePairedDelimiterX{\hx}[1]{(}{)}{%
+  #1
+}
+\newcommand{\h}{H\hx}
+
+% Covariance
+\DeclarePairedDelimiterX{\covx}[2]{(}{)}{%
+  #1,#2
+}
+\newcommand{\cov}{\mathrm{cov}\covx}
+
+% Multi-Mutual Information I(X,Y)
+\DeclarePairedDelimiterX{\Itotx}[1]{(}{)}{%
+  #1
+}
+\newcommand{\Itot}{I\Itotx}
+
+% Gaussian Mutual Information I(X,Y)
+\DeclarePairedDelimiterX{\Itotnx}[1]{(}{)}{%
+  #1
+}
+\newcommand{\Itotn}{I_\mathcal{N}\Itotnx}
+
+
+
+% sets
+\newcommand{\stcomp}[1]{{#1}^{\mathsf{c}}}
+
+\DeclarePairedDelimiterX{\powersetx}[1]{(}{)}{%
+  #1
+}
+\newcommand{\powerset}{\mathcal{P}\powersetx}
+
+\DeclarePairedDelimiterX{\setx}[1]{\{}{\}}{%
+  #1
+}
+\newcommand{\set}{\setx}
+
+
+% arg max, arg min, arg sup
+\newcommand{\argmin}{\mathop{\mathrm{arg\,min}}}
+\newcommand{\argmax}{\mathop{\mathrm{arg\,max}}}
+\newcommand{\argsup}{\mathop{\mathrm{arg\,sup}}}
+
+% inner product < >
+\DeclarePairedDelimiterX{\inner}[2]{\langle}{\rangle}{%
+	#1,#2
+}
+
+% General math defs
+\newcommand{\rand}[1]{\uppercase{#1}}
+\newcommand{\mat}[1]{\mathbf{\uppercase{#1}}}
+\renewcommand{\vec}[1]{\mathbf{\lowercase{#1}}}
+\newcommand{\randmat}[1]{\mat{#1}}
+\newcommand{\randvec}[1]{\vec{#1}}
+\newcommand{\transpose}[1]{#1^\intercal}
+\newcommand{\expected}[1]{\mathbb{E}#1}
+\newcommand{\p}[1]{p\left(#1\right)}
+\newcommand{\pest}[1]{\hat{p}\left(#1\right)}
+\newcommand{\grad}{\nabla}
+
+
+% Conditional probability p(y|x)
+\DeclarePairedDelimiterX{\condpx}[2]{(}{)}{%
+  #1\mid#2
+}
+\newcommand{\condp}{p\condpx}
+
+\newcommand{\xhat}{\hat{x}}
+\newcommand{\Xhat}{\widehat{X}}
+\newcommand{\exhat}{\tilde{x}}
+
+% Bregman divergence
+\DeclarePairedDelimiterX{\dphix}[2]{(}{)}{%
+  #1\delimsize\|#2
+}
+\newcommand{\dphi}{d_\phi\dphix}
+
+\DeclarePairedDelimiterX{\dpsix}[2]{(}{)}{%
+  #1\delimsize\|#2
+}
+\newcommand{\dpsi}{d_\psi\dpsix}
+
+\DeclarePairedDelimiterX{\dbregx}[2]{(}{)}{%
+  #1\delimsize\|#2
+}
+\newcommand{\dbreg}{d\dbregx}
+
+\newcommand{\cielab}{CIE Lab }
+\newcommand{\lab}{Lab}
+\newcommand{\ciedeltaE}{$\Delta\text{E}^{\star}$}
+
+\newcommand{\Rversion}{v3.6.3}
+\newcommand{\RColorscience}{\texttt{colorscience}~(v1.0.8)}
+\newcommand{\Rlmefour}{\texttt{lme4}~(v1.1-21)}
+\newcommand{\RDHARMa}{\texttt{DHARMa}~(v0.2.6)}
+\newcommand{\Rnloptr}{\texttt{nloptr}~(v1.2.1)}
+\newcommand{\Remdist}{\texttt{emdist}~(v0.3-1)}
+
+\newcommand{\pinf}{p_\mathrm{inf}}
+\newcommand{\punif}{p_\mathrm{unif}}
+\newcommand{\plang}{p_\mathrm{lang}}
+
+% Lookup table based on https://tex.stackexchange.com/a/343306
+\makeatletter
+\newcommand\addfield[3]{\expandafter\def\csname\string#1@case@#2\endcsname{#3}}
+\newcommand\valuetable[2][]{%
+	\newcommand#2[1]{%
+		\ifcsname\string#2@case@##1\endcsname\csname\string#2@case@##1\endcsname\else#1\fi%
+	}%
+}
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\renewcommand\qedsymbol{$\blacksquare$}

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Twomey"
+  given-names: "Colin"
+  orcid: "https://orcid.org/0000-0002-7368-2861"
+title: "Code for Twomey et al. 2024 History constrains the evolution of efficient color naming, enabling historical inference"
+version: 1.0.0
+date-released: 2024-02-09
+url: "https://github.com/crtwomey/twomey2024"
