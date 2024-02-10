@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/755312042.svg)](https://zenodo.org/doi/10.5281/zenodo.10642708)
 
 # Code and Data Supplementary Information for Twomey et al. (2024)
 
